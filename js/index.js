@@ -6,7 +6,7 @@ const dwnldBtn = document.querySelector(".download");
 document.querySelector(".top-cover img").style.bottom = window.scrollY / 4 + "px";
 
 window.addEventListener("scroll", () => {
-  nav.style.background = `rgb(33, 33, 33, ${window.scrollY / 500})`;
+  nav.style.background = "rgb(33, 33, 33, " + window.scrollY / 500 + ")";
 
   nav.style.fontSize = Math.max(20, 24 -window.scrollY / 100) + "px";
   document.querySelector(".top-cover img").style.top = "-" + window.scrollY / 3 + "px";
