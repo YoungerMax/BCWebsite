@@ -84,11 +84,12 @@ nav .items * {
 
 .top-cover img {
   position: fixed;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
-  max-height: 100vh;
-  min-width: 100vw;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .top-cover .text {
@@ -191,6 +192,12 @@ nav .items * {
 .rImg {
   width: 75vw;
   border-radius: 10px;
+  transform: scale(0.0);
+  transition: 0.5s transform;
+}
+
+.rImg.shown {
+	transform: scale(1.0);
 }
 
 .download {
@@ -215,8 +222,8 @@ nav .items * {
 }
 
 .download:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
 .download:active {
