@@ -15,16 +15,16 @@ window.addEventListener("scroll", () => {
 
   for (let i = 0; i < document.querySelectorAll(".reason").length; i++) {
     reason = document.querySelectorAll(".reason")[i];
-	
+
 
     if (reason.getBoundingClientRect().top < 800 && !reason.classList.contains("shown")) {
       reason.classList.add("shown");
     }
   }
-  
+
   for (let i = 0; i < document.querySelectorAll(".rImg").length; i++) {
 	  img = document.querySelectorAll(".rImg")[i];
-	  
+
 	  if (img.getBoundingClientRect().top < 900 && !img.classList.contains("shown")) {
       img.classList.add("shown");
     }
@@ -38,6 +38,6 @@ learnMoreButton.addEventListener("click", () => {
 dwnldBtn.addEventListener("click", () => {
   document.documentElement.style.setProperty("--dwnld-clr", "#c321cc");
   dwnldBtn.textContent = "Downloading!";
-  window.open("https://github.com/YoungerMax/BreezeClientWebsite/releases/download/v0.7.0/Breeze_Client_v0.7.0.zip");
+  window.open("https://github.com/YoungerMax/BreezeClientWebsite/releases/download/v0.7.0/Breeze_Client.zip");
   document.querySelector(".dwnld-a").classList.add("show");
 });
