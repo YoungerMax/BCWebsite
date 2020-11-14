@@ -64,6 +64,7 @@ nav .items {
 
 nav .items * {
   text-decoration: none;
+  margin-left: 32px;
 }
 
 /* top cover section */
