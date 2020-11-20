@@ -49,22 +49,35 @@ nav {
   z-index: 10;
   width: 100vw;
   padding: 20px;
-  font-size: 24px;
+  font-size: 25px;
   color: #ffffff;
   font-family: 'Roboto Condensed', sans-serif;
   transition: 0.1s linear background;
   display: flex;
+  align-items: center;
 }
 
 nav .items {
   position: fixed;
-  width: calc(100vw - 60px);
   text-align: right;
+  left: 50vw;
+  transform: translateX(-55px);
+  width: 50vw;
+}
+
+nav .logo {
+  width: 48px;
+  margin-right: 10px;
 }
 
 nav .items * {
   text-decoration: none;
   margin-left: 32px;
+  transition: 0.3s text-shadow;
+}
+
+nav .items *:hover {
+  text-shadow: 0px 0px 10px;
 }
 
 /* top cover section */
@@ -124,7 +137,7 @@ nav .items * {
   color: #ffffff;
   z-index: 2;
   text-align: center;
-  animation: learnmoreupdown 3.5s ease-out infinite;
+  animation: learnmoreupdown 3.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
   font-family: 'Roboto Condensed', sans-serif;
 
   transition: color 0.3s;
