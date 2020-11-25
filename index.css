@@ -1,0 +1,286 @@
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,700&family=Roboto+Condensed:wght@300&display=swap');
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%)
+    scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+:root {
+  --dwnld-clr: #3ec305;
+}
+
+a {
+  color: #e2e2e2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* other */
+.material-icons {
+  user-select: none;
+}
+
+.big-icon {
+  font-size: 50px;
+}
+
+/* navigation */
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  padding: 20px;
+  font-size: 25px;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  transition: 0.1s linear background;
+  display: flex;
+  align-items: center;
+}
+
+nav .link-home {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav .items {
+  position: fixed;
+  text-align: right;
+  left: 50vw;
+  transform: translateX(-55px);
+  width: 50vw;
+}
+
+nav .logo {
+  width: 48px;
+  margin-right: 10px;
+}
+
+nav .items * {
+  text-decoration: none;
+  margin-left: 32px;
+  transition: 0.3s text-shadow;
+}
+
+nav .items *:hover {
+  text-shadow: 0px 0px 10px;
+}
+
+/* top cover section */
+.top-cover {
+  top: 0px;
+}
+
+.top-cover div.black-overlay {
+  background: rgb(35, 35, 35);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.top-cover img {
+  z-index: -100000;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.top-cover .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: #ffffff;
+  z-index: 2;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  animation: fadeIn 1s ease 1;
+}
+
+.top-cover .text .header {
+  font-weight: 600;
+  font-size: 5.4em;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.top-cover .text .tidbit {
+  font-size: 2em;
+}
+
+.top-cover .learn-more {
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  transform: translateY(-175%);
+  color: #ffffff;
+  z-index: 2;
+  text-align: center;
+  animation: learnmoreupdown 3.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  transition: color 0.3s;
+}
+
+.top-cover .learn-more:hover {
+  cursor: pointer;
+  color: #8a8a8a;
+}
+
+@keyframes learnmoreupdown {
+  0% {
+    transform: translateY(-175%);
+  }
+
+  50% {
+    transform: translateY(-125%);
+  }
+}
+
+/* information */
+.information {
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  background: #212121;
+  color: #f4f4f4;
+  width: 100vw;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.information * {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.information .reason {
+  margin-top: 60px;
+  margin-bottom: 25px;
+
+}
+
+.information .reason {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.information .reason.shown {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+.information .reason h1 {
+  text-transform: uppercase;
+}
+
+.information .reason p {
+  font-size: 0.7em;
+}
+
+.rImg {
+  width: 75vw;
+  border-radius: 10px;
+  transform: scale(0.0);
+  transition: 0.5s transform;
+}
+
+.rImg.shown {
+	transform: scale(1.0);
+}
+
+.download {
+  background: var(--dwnld-clr);
+  border: none;
+  padding: 32px 72px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bolder;
+  font-size: 1em;
+  text-transform: uppercase;
+  box-shadow: var(--dwnld-clr) 0px 0px 50px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  max-width: 75%;
+
+  transition: 0.2s;
+
+  z-index: 5;
+}
+
+.download:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.download:active {
+  transform: scale(0.95);
+}
+
+footer {
+  width: 100vw;
+  position: absolute;
+  left: -10%;
+  text-align: left;
+
+  font-size: 0.5em;
+  padding: 20px;
+  background: #181818;
+}
+
+.icon {
+  width: 56px;
+  position: absolute;
+  left: calc(100% - 10%);
+  transform: translate(-450%, -50%);
+  z-index: 5;
+}
+
+.dwnld-a {
+  font-size: 0.6em;
+  position: relative;
+  top: -180px;
+  opacity: 0;
+
+  transition: 1s;
+  z-index: -1;
+}
+
+.dwnld-a.show {
+  top: -100px;
+  opacity: 1;
+  z-index: 5;
+}
