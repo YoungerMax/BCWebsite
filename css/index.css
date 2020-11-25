@@ -57,6 +57,12 @@ nav {
   align-items: center;
 }
 
+nav .link-home {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 nav .items {
   position: fixed;
   text-align: right;
