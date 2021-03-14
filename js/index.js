@@ -41,6 +41,6 @@ learnMoreButton.addEventListener("click", () => {
 dwnldBtn.addEventListener("click", () => {
   document.documentElement.style.setProperty("--dwnld-clr", "#c321cc");
   dwnldBtn.textContent = "Downloading!";
-  window.open("https://github.com/YoungerMax/BreezeClientWebsite/releases/download/v1.0/Breeze.Client.Installer.jar");
+  window.open("https://github.com/YoungerMax/BreezeClientWebsite/releases/download/v1.0.1/breezeclientinstaller-1.0-SNAPSHOT.jar");
   document.querySelector(".dwnld-a").classList.add("show");
 });
